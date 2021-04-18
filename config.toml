@@ -1,0 +1,256 @@
+baseURL = "https://flunka.pl/"
+# [en, zh-cn, fr, ...] determines default content language
+defaultContentLanguage = "en"
+# language code
+languageCode = "en"
+title = "Flunka"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "uBlogger"
+
+enableEmoji = true
+
+[params]
+  # uBlogger theme version
+  version = "2.0.X"
+  description = "The main purpose of this site is to document my projects and help others to with similar projects."
+  keywords = ["DevOps", "NetDevOps", "IT", "Python", "Linux", "Ansible"]
+  gitRepo = "https://github.com/flunka"
+  fingerprint = "sha512"
+  dateFormat = "2006-01-02"
+
+
+  [params.app]
+    title = "Flunka"
+    noFavicon = false
+    svgFavicon = ""
+    # Android browser theme color
+    themeColor = "#ffffff"
+    # Safari mask icon color
+    iconColor = "#5bbad5"
+    # Windows v8-10 tile color
+    tileColor = "#da532c"
+  
+  [params.search]
+    enable = true
+    # type of search engine ("lunr", "algolia")
+    type = "lunr"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # uBlogger NEW | 0.2.1 max number of results length
+    maxResultLength = 10
+    # uBlogger NEW | 0.2.3 snippet length of the result
+    snippetLength = 30
+    # uBlogger NEW | 0.2.1 HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # uBlogger NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+    # uBlogger NEW | 0.2.0 Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "Flunka"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+  
+  [params.home]
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      avatarURL = "/images/logo.png"
+      title = "Flunka"
+      subtitle = "Automation, NetDevOps and other stuff"
+      social = true
+      disclaimer = ""
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.footer]
+    enable = true
+    custom = ''
+    hugo = true
+    copyright = true
+    author = true
+    since = 2021
+
+  [params.social]
+    GitHub = "flunka"
+    Linkedin = "piotr-banas"
+    Email = "flunka@gmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    pre = ""
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+  [[menu.main]]
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/about/"
+    title = ""
+    weight = 4
+
+  [params.page]
+    [params.page.share]
+      enable = true
+      Whatsapp = true
+      Linkedin = true
+
+  [params.author]
+    name = "Flunka.en"
+
+[author]
+  name = "Flunka.en"
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration
+    noClasses = false
+
+
+  
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+
+[languages]
+  [languages.en]
+    weight = 1
+    title = "Flunka"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "about"
+      pre = ""
+      post = ""
+      name = "About"
+      url = "/about/"
+      title = ""
+      weight = 4
+
+  [languages.pl]
+    weight = 1
+    title = "Flunka"
+    languageCode = "pl"
+    languageName = "Polski"
+    [[languages.pl.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posty"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.pl.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tagi"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.pl.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Kategorie"
+      url = "/categories/"
+      title = ""
+      weight = 3
+    [[languages.pl.menu.main]]
+      identifier = "about"
+      pre = ""
+      post = ""
+      name = "O mnie"
+      url = "/about/"
+      title = ""
+      weight = 4
+
+  [languages.pl.params.home]
+    rss = 10
+    # Home page profile
+    [languages.pl.params.home.profile]
+      enable = true
+      avatarURL = "/images/logo.png"
+      title = "Flunka"
+      subtitle = "Automatyzacja, NetDevOps i inne rzeczy"
+      social = true
+      disclaimer = ""
+    [languages.pl.params.home.posts]
+      enable = true
+      paginate = 6
+
+  [languages.pl.params.author]
+    name = "Flunka.pl"
+
+  [languages.pl.params.footer]
+    enable = true
+    custom = ''
+    hugo = true
+    copyright = true
+    author = true
+    since = 2021
+
