@@ -14,8 +14,7 @@ enableEmoji = true
   # uBlogger theme version
   version = "2.0.X"
   description = "The main purpose of this site is to document my projects and help others to with similar projects."
-  keywords = ["DevOps", "NetDevOps", "IT", "Python", "Linux", "Ansible"]
-  gitRepo = "https://github.com/flunka"
+  keywords = ["DevOps", "NetDevOps", "IT", "Python", "Linux", "Ansible", "Network"]
   fingerprint = "sha512"
   dateFormat = "2006-01-02"
 
@@ -71,7 +70,7 @@ enableEmoji = true
       enable = true
       avatarURL = "/images/logo.png"
       title = "Flunka"
-      subtitle = "Automation, NetDevOps and other stuff"
+      subtitle = "Automation, Network, DevOps and other stuff"
       social = true
       disclaimer = ""
     [params.home.posts]
@@ -144,6 +143,7 @@ enableEmoji = true
   [markup.highlight]
     # false is a necessary configuration
     noClasses = false
+    lineNumbersInTable = true
 
 
   
@@ -236,7 +236,7 @@ enableEmoji = true
       enable = true
       avatarURL = "/images/logo.png"
       title = "Flunka"
-      subtitle = "Automatyzacja, NetDevOps i inne rzeczy"
+      subtitle = "Automatyzacja, sieć, DevOps i inne rzeczy"
       social = true
       disclaimer = ""
     [languages.pl.params.home.posts]
@@ -253,4 +253,10 @@ enableEmoji = true
     copyright = true
     author = true
     since = 2021
+
+  [languages.pl.markup]
+    # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+    [languages.pl.markup.highlight]
+      lineNos = true
+      noClasses = false
 
